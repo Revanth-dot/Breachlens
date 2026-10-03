@@ -1,0 +1,724 @@
+[
+  {
+    "id": "0d44a8f7-35a3-41f2-ab53-9fe61edfd1d5",
+    "user_id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "url": "https://example.com",
+    "status": "completed",
+    "results": [
+      {
+        "type": "Authentication Weakness",
+        "severity": "Critical",
+        "description": "The login system at https://example.com/login lacks rate limiting, account lockout, and multi-factor authentication. Brute force attacks are feasible.",
+        "recommendation": "Implement rate limiting, account lockout after failed attempts, and multi-factor authentication. Use strong password policies.",
+        "risk_score": 100,
+        "breach_probability": "99%",
+        "financial_loss": "\u20b913.2L",
+        "fix_cost": "\u20b91.1L"
+      },
+      {
+        "type": "SQL Injection",
+        "severity": "Critical",
+        "description": "SQL injection vulnerability detected in the login form at https://example.com/login. The 'username' parameter is directly concatenated into SQL queries without parameterization.",
+        "recommendation": "Use parameterized queries / prepared statements. Implement input validation and use an ORM framework.",
+        "risk_score": 100,
+        "breach_probability": "96%",
+        "financial_loss": "\u20b968.0L",
+        "fix_cost": "\u20b989,746"
+      },
+      {
+        "type": "Cross-Site Request Forgery (CSRF)",
+        "severity": "High",
+        "description": "Forms at https://example.com lack CSRF tokens. An attacker can craft malicious requests that execute authenticated actions without user consent.",
+        "recommendation": "Implement anti-CSRF tokens for all state-changing operations. Use SameSite cookie attribute and validate Origin headers.",
+        "risk_score": 100,
+        "breach_probability": "71%",
+        "financial_loss": "\u20b915.7L",
+        "fix_cost": "\u20b962,829"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://example.com/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "77%",
+        "financial_loss": "\u20b917.0L",
+        "fix_cost": "\u20b966,023"
+      },
+      {
+        "type": "Insecure Direct Object Reference (IDOR)",
+        "severity": "High",
+        "description": "IDOR vulnerability in API endpoint https://example.com/api/users. User IDs are sequential and accessible without proper authorization checks.",
+        "recommendation": "Implement proper access control checks. Use UUID-based identifiers and validate user ownership of resources.",
+        "risk_score": 100,
+        "breach_probability": "87%",
+        "financial_loss": "\u20b914.7L",
+        "fix_cost": "\u20b953,784"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://example.com is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "36%",
+        "financial_loss": "\u20b91.9L",
+        "fix_cost": "\u20b910,398"
+      },
+      {
+        "type": "Open Directory Listing",
+        "severity": "Medium",
+        "description": "Directory listing is enabled on the server at https://example.com/backup, exposing sensitive files including configuration backups and database dumps.",
+        "recommendation": "Disable directory listing on the web server. Configure appropriate directory permissions and use index files.",
+        "risk_score": 100,
+        "breach_probability": "47%",
+        "financial_loss": "\u20b96.9L",
+        "fix_cost": "\u20b923,622"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://example.com. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "13%",
+        "financial_loss": "\u20b977,798",
+        "fix_cost": "\u20b98,576"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 8,
+      "critical_count": 2,
+      "high_count": 3,
+      "medium_count": 2,
+      "low_count": 1,
+      "average_risk_score": 89.8,
+      "total_financial_loss": "\u20b977,798",
+      "total_fix_cost": "\u20b93.1L"
+    },
+    "created_at": "2026-06-11T10:48:03.344689"
+  },
+  {
+    "id": "ec36845a-5d2e-48cb-8a74-24e9c74130df",
+    "user_id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "url": "https://testsite.org",
+    "status": "completed",
+    "results": [
+      {
+        "type": "SQL Injection",
+        "severity": "Critical",
+        "description": "SQL injection vulnerability detected in the login form at https://testsite.org/login. The 'username' parameter is directly concatenated into SQL queries without parameterization.",
+        "recommendation": "Use parameterized queries / prepared statements. Implement input validation and use an ORM framework.",
+        "risk_score": 100,
+        "breach_probability": "99%",
+        "financial_loss": "\u20b917.1L",
+        "fix_cost": "\u20b979,849"
+      },
+      {
+        "type": "Authentication Weakness",
+        "severity": "Critical",
+        "description": "The login system at https://testsite.org/login lacks rate limiting, account lockout, and multi-factor authentication. Brute force attacks are feasible.",
+        "recommendation": "Implement rate limiting, account lockout after failed attempts, and multi-factor authentication. Use strong password policies.",
+        "risk_score": 100,
+        "breach_probability": "97%",
+        "financial_loss": "\u20b923.4L",
+        "fix_cost": "\u20b994,570"
+      },
+      {
+        "type": "Cross-Site Request Forgery (CSRF)",
+        "severity": "High",
+        "description": "Forms at https://testsite.org lack CSRF tokens. An attacker can craft malicious requests that execute authenticated actions without user consent.",
+        "recommendation": "Implement anti-CSRF tokens for all state-changing operations. Use SameSite cookie attribute and validate Origin headers.",
+        "risk_score": 100,
+        "breach_probability": "66%",
+        "financial_loss": "\u20b912.6L",
+        "fix_cost": "\u20b938,130"
+      },
+      {
+        "type": "Insecure Direct Object Reference (IDOR)",
+        "severity": "High",
+        "description": "IDOR vulnerability in API endpoint https://testsite.org/api/users. User IDs are sequential and accessible without proper authorization checks.",
+        "recommendation": "Implement proper access control checks. Use UUID-based identifiers and validate user ownership of resources.",
+        "risk_score": 100,
+        "breach_probability": "80%",
+        "financial_loss": "\u20b98.7L",
+        "fix_cost": "\u20b950,997"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://testsite.org/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "79%",
+        "financial_loss": "\u20b95.0L",
+        "fix_cost": "\u20b946,936"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://testsite.org is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "41%",
+        "financial_loss": "\u20b94.0L",
+        "fix_cost": "\u20b914,088"
+      },
+      {
+        "type": "Open Directory Listing",
+        "severity": "Medium",
+        "description": "Directory listing is enabled on the server at https://testsite.org/backup, exposing sensitive files including configuration backups and database dumps.",
+        "recommendation": "Disable directory listing on the web server. Configure appropriate directory permissions and use index files.",
+        "risk_score": 100,
+        "breach_probability": "45%",
+        "financial_loss": "\u20b95.9L",
+        "fix_cost": "\u20b919,823"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://testsite.org. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "14%",
+        "financial_loss": "\u20b966,016",
+        "fix_cost": "\u20b98,305"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 8,
+      "critical_count": 2,
+      "high_count": 3,
+      "medium_count": 2,
+      "low_count": 1,
+      "average_risk_score": 89.8,
+      "total_financial_loss": "\u20b966,016",
+      "total_fix_cost": "\u20b93.5L"
+    },
+    "created_at": "2026-06-11T10:48:03.353931"
+  },
+  {
+    "id": "34cf5a09-b75d-4bed-a5c2-da25d28019fb",
+    "user_id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "url": "https://demoapp.io",
+    "status": "completed",
+    "results": [
+      {
+        "type": "Authentication Weakness",
+        "severity": "Critical",
+        "description": "The login system at https://demoapp.io/login lacks rate limiting, account lockout, and multi-factor authentication. Brute force attacks are feasible.",
+        "recommendation": "Implement rate limiting, account lockout after failed attempts, and multi-factor authentication. Use strong password policies.",
+        "risk_score": 100,
+        "breach_probability": "99%",
+        "financial_loss": "\u20b930.0L",
+        "fix_cost": "\u20b993,270"
+      },
+      {
+        "type": "SQL Injection",
+        "severity": "Critical",
+        "description": "SQL injection vulnerability detected in the login form at https://demoapp.io/login. The 'username' parameter is directly concatenated into SQL queries without parameterization.",
+        "recommendation": "Use parameterized queries / prepared statements. Implement input validation and use an ORM framework.",
+        "risk_score": 100,
+        "breach_probability": "99%",
+        "financial_loss": "\u20b927.8L",
+        "fix_cost": "\u20b975,250"
+      },
+      {
+        "type": "Cross-Site Request Forgery (CSRF)",
+        "severity": "High",
+        "description": "Forms at https://demoapp.io lack CSRF tokens. An attacker can craft malicious requests that execute authenticated actions without user consent.",
+        "recommendation": "Implement anti-CSRF tokens for all state-changing operations. Use SameSite cookie attribute and validate Origin headers.",
+        "risk_score": 100,
+        "breach_probability": "75%",
+        "financial_loss": "\u20b96.7L",
+        "fix_cost": "\u20b961,496"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://demoapp.io/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "77%",
+        "financial_loss": "\u20b916.0L",
+        "fix_cost": "\u20b942,899"
+      },
+      {
+        "type": "Insecure Direct Object Reference (IDOR)",
+        "severity": "High",
+        "description": "IDOR vulnerability in API endpoint https://demoapp.io/api/users. User IDs are sequential and accessible without proper authorization checks.",
+        "recommendation": "Implement proper access control checks. Use UUID-based identifiers and validate user ownership of resources.",
+        "risk_score": 100,
+        "breach_probability": "81%",
+        "financial_loss": "\u20b99.1L",
+        "fix_cost": "\u20b947,551"
+      },
+      {
+        "type": "Open Directory Listing",
+        "severity": "Medium",
+        "description": "Directory listing is enabled on the server at https://demoapp.io/backup, exposing sensitive files including configuration backups and database dumps.",
+        "recommendation": "Disable directory listing on the web server. Configure appropriate directory permissions and use index files.",
+        "risk_score": 100,
+        "breach_probability": "48%",
+        "financial_loss": "\u20b93.0L",
+        "fix_cost": "\u20b918,609"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://demoapp.io is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "35%",
+        "financial_loss": "\u20b91.3L",
+        "fix_cost": "\u20b914,024"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://demoapp.io. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "13%",
+        "financial_loss": "\u20b955,741",
+        "fix_cost": "\u20b95,719"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 8,
+      "critical_count": 2,
+      "high_count": 3,
+      "medium_count": 2,
+      "low_count": 1,
+      "average_risk_score": 89.8,
+      "total_financial_loss": "\u20b955,741",
+      "total_fix_cost": "\u20b93.6L"
+    },
+    "created_at": "2026-06-11T10:48:03.363014"
+  },
+  {
+    "id": "37f4cc41-759f-46bd-83f1-4588b99b3ac1",
+    "user_id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "url": "https://shopify-test.myshopify.com",
+    "status": "completed",
+    "results": [
+      {
+        "type": "SQL Injection",
+        "severity": "Critical",
+        "description": "SQL injection vulnerability detected in the login form at https://shopify-test.myshopify.com/login. The 'username' parameter is directly concatenated into SQL queries without parameterization.",
+        "recommendation": "Use parameterized queries / prepared statements. Implement input validation and use an ORM framework.",
+        "risk_score": 100,
+        "breach_probability": "95%",
+        "financial_loss": "\u20b923.5L",
+        "fix_cost": "\u20b91.0L"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://shopify-test.myshopify.com/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "75%",
+        "financial_loss": "\u20b910.7L",
+        "fix_cost": "\u20b959,281"
+      },
+      {
+        "type": "Open Directory Listing",
+        "severity": "Medium",
+        "description": "Directory listing is enabled on the server at https://shopify-test.myshopify.com/backup, exposing sensitive files including configuration backups and database dumps.",
+        "recommendation": "Disable directory listing on the web server. Configure appropriate directory permissions and use index files.",
+        "risk_score": 100,
+        "breach_probability": "47%",
+        "financial_loss": "\u20b92.5L",
+        "fix_cost": "\u20b913,916"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://shopify-test.myshopify.com is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "40%",
+        "financial_loss": "\u20b92.7L",
+        "fix_cost": "\u20b921,250"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://shopify-test.myshopify.com. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "18%",
+        "financial_loss": "\u20b91.2L",
+        "fix_cost": "\u20b95,706"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 5,
+      "critical_count": 1,
+      "high_count": 1,
+      "medium_count": 2,
+      "low_count": 1,
+      "average_risk_score": 83.8,
+      "total_financial_loss": "\u20b90",
+      "total_fix_cost": "\u20b91.0L"
+    },
+    "created_at": "2026-06-11T10:48:03.363014"
+  },
+  {
+    "id": "4d7fc651-c0fc-41cc-9eac-bcf86997088a",
+    "user_id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "url": "https://wordpress-test.local",
+    "status": "completed",
+    "results": [
+      {
+        "type": "Authentication Weakness",
+        "severity": "Critical",
+        "description": "The login system at https://wordpress-test.local/login lacks rate limiting, account lockout, and multi-factor authentication. Brute force attacks are feasible.",
+        "recommendation": "Implement rate limiting, account lockout after failed attempts, and multi-factor authentication. Use strong password policies.",
+        "risk_score": 100,
+        "breach_probability": "99%",
+        "financial_loss": "\u20b937.3L",
+        "fix_cost": "\u20b996,696"
+      },
+      {
+        "type": "Insecure Direct Object Reference (IDOR)",
+        "severity": "High",
+        "description": "IDOR vulnerability in API endpoint https://wordpress-test.local/api/users. User IDs are sequential and accessible without proper authorization checks.",
+        "recommendation": "Implement proper access control checks. Use UUID-based identifiers and validate user ownership of resources.",
+        "risk_score": 100,
+        "breach_probability": "88%",
+        "financial_loss": "\u20b925.9L",
+        "fix_cost": "\u20b938,050"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://wordpress-test.local/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "74%",
+        "financial_loss": "\u20b914.3L",
+        "fix_cost": "\u20b933,900"
+      },
+      {
+        "type": "Open Directory Listing",
+        "severity": "Medium",
+        "description": "Directory listing is enabled on the server at https://wordpress-test.local/backup, exposing sensitive files including configuration backups and database dumps.",
+        "recommendation": "Disable directory listing on the web server. Configure appropriate directory permissions and use index files.",
+        "risk_score": 100,
+        "breach_probability": "55%",
+        "financial_loss": "\u20b95.8L",
+        "fix_cost": "\u20b912,922"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://wordpress-test.local is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "39%",
+        "financial_loss": "\u20b93.2L",
+        "fix_cost": "\u20b927,417"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://wordpress-test.local. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "11%",
+        "financial_loss": "\u20b91.3L",
+        "fix_cost": "\u20b95,741"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 6,
+      "critical_count": 1,
+      "high_count": 2,
+      "medium_count": 2,
+      "low_count": 1,
+      "average_risk_score": 86.5,
+      "total_financial_loss": "\u20b90",
+      "total_fix_cost": "\u20b92.1L"
+    },
+    "created_at": "2026-06-11T10:48:03.378651"
+  },
+  {
+    "id": "2381a82e-79ce-46c8-ae4c-dc3fd37e3a0e",
+    "user_id": "e54f2aac-85ff-4378-8502-63ce00559833",
+    "url": "https://example.com",
+    "status": "completed",
+    "results": [
+      {
+        "type": "Authentication Weakness",
+        "severity": "Critical",
+        "description": "The login system at https://example.com/login lacks rate limiting, account lockout, and multi-factor authentication. Brute force attacks are feasible.",
+        "recommendation": "Implement rate limiting, account lockout after failed attempts, and multi-factor authentication. Use strong password policies.",
+        "risk_score": 100,
+        "breach_probability": "99%",
+        "financial_loss": "\u20b913.2L",
+        "fix_cost": "\u20b91.1L"
+      },
+      {
+        "type": "SQL Injection",
+        "severity": "Critical",
+        "description": "SQL injection vulnerability detected in the login form at https://example.com/login. The 'username' parameter is directly concatenated into SQL queries without parameterization.",
+        "recommendation": "Use parameterized queries / prepared statements. Implement input validation and use an ORM framework.",
+        "risk_score": 100,
+        "breach_probability": "96%",
+        "financial_loss": "\u20b968.0L",
+        "fix_cost": "\u20b989,746"
+      },
+      {
+        "type": "Cross-Site Request Forgery (CSRF)",
+        "severity": "High",
+        "description": "Forms at https://example.com lack CSRF tokens. An attacker can craft malicious requests that execute authenticated actions without user consent.",
+        "recommendation": "Implement anti-CSRF tokens for all state-changing operations. Use SameSite cookie attribute and validate Origin headers.",
+        "risk_score": 100,
+        "breach_probability": "71%",
+        "financial_loss": "\u20b915.7L",
+        "fix_cost": "\u20b962,829"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://example.com/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "77%",
+        "financial_loss": "\u20b917.0L",
+        "fix_cost": "\u20b966,023"
+      },
+      {
+        "type": "Insecure Direct Object Reference (IDOR)",
+        "severity": "High",
+        "description": "IDOR vulnerability in API endpoint https://example.com/api/users. User IDs are sequential and accessible without proper authorization checks.",
+        "recommendation": "Implement proper access control checks. Use UUID-based identifiers and validate user ownership of resources.",
+        "risk_score": 100,
+        "breach_probability": "87%",
+        "financial_loss": "\u20b914.7L",
+        "fix_cost": "\u20b953,784"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://example.com is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "36%",
+        "financial_loss": "\u20b91.9L",
+        "fix_cost": "\u20b910,398"
+      },
+      {
+        "type": "Open Directory Listing",
+        "severity": "Medium",
+        "description": "Directory listing is enabled on the server at https://example.com/backup, exposing sensitive files including configuration backups and database dumps.",
+        "recommendation": "Disable directory listing on the web server. Configure appropriate directory permissions and use index files.",
+        "risk_score": 100,
+        "breach_probability": "47%",
+        "financial_loss": "\u20b96.9L",
+        "fix_cost": "\u20b923,622"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://example.com. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "13%",
+        "financial_loss": "\u20b977,798",
+        "fix_cost": "\u20b98,576"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 8,
+      "critical_count": 2,
+      "high_count": 3,
+      "medium_count": 2,
+      "low_count": 1,
+      "average_risk_score": 89.8,
+      "total_financial_loss": "\u20b977,798",
+      "total_fix_cost": "\u20b93.1L"
+    },
+    "created_at": "2026-06-11T10:48:03.409904"
+  },
+  {
+    "id": "18ca1c61-728e-489d-ba7f-533a698f63ba",
+    "user_id": "e54f2aac-85ff-4378-8502-63ce00559833",
+    "url": "https://testsite.org",
+    "status": "completed",
+    "results": [
+      {
+        "type": "SQL Injection",
+        "severity": "Critical",
+        "description": "SQL injection vulnerability detected in the login form at https://testsite.org/login. The 'username' parameter is directly concatenated into SQL queries without parameterization.",
+        "recommendation": "Use parameterized queries / prepared statements. Implement input validation and use an ORM framework.",
+        "risk_score": 100,
+        "breach_probability": "99%",
+        "financial_loss": "\u20b917.1L",
+        "fix_cost": "\u20b979,849"
+      },
+      {
+        "type": "Authentication Weakness",
+        "severity": "Critical",
+        "description": "The login system at https://testsite.org/login lacks rate limiting, account lockout, and multi-factor authentication. Brute force attacks are feasible.",
+        "recommendation": "Implement rate limiting, account lockout after failed attempts, and multi-factor authentication. Use strong password policies.",
+        "risk_score": 100,
+        "breach_probability": "97%",
+        "financial_loss": "\u20b923.4L",
+        "fix_cost": "\u20b994,570"
+      },
+      {
+        "type": "Cross-Site Request Forgery (CSRF)",
+        "severity": "High",
+        "description": "Forms at https://testsite.org lack CSRF tokens. An attacker can craft malicious requests that execute authenticated actions without user consent.",
+        "recommendation": "Implement anti-CSRF tokens for all state-changing operations. Use SameSite cookie attribute and validate Origin headers.",
+        "risk_score": 100,
+        "breach_probability": "66%",
+        "financial_loss": "\u20b912.6L",
+        "fix_cost": "\u20b938,130"
+      },
+      {
+        "type": "Insecure Direct Object Reference (IDOR)",
+        "severity": "High",
+        "description": "IDOR vulnerability in API endpoint https://testsite.org/api/users. User IDs are sequential and accessible without proper authorization checks.",
+        "recommendation": "Implement proper access control checks. Use UUID-based identifiers and validate user ownership of resources.",
+        "risk_score": 100,
+        "breach_probability": "80%",
+        "financial_loss": "\u20b98.7L",
+        "fix_cost": "\u20b950,997"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://testsite.org/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "79%",
+        "financial_loss": "\u20b95.0L",
+        "fix_cost": "\u20b946,936"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://testsite.org is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "41%",
+        "financial_loss": "\u20b94.0L",
+        "fix_cost": "\u20b914,088"
+      },
+      {
+        "type": "Open Directory Listing",
+        "severity": "Medium",
+        "description": "Directory listing is enabled on the server at https://testsite.org/backup, exposing sensitive files including configuration backups and database dumps.",
+        "recommendation": "Disable directory listing on the web server. Configure appropriate directory permissions and use index files.",
+        "risk_score": 100,
+        "breach_probability": "45%",
+        "financial_loss": "\u20b95.9L",
+        "fix_cost": "\u20b919,823"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://testsite.org. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "14%",
+        "financial_loss": "\u20b966,016",
+        "fix_cost": "\u20b98,305"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 8,
+      "critical_count": 2,
+      "high_count": 3,
+      "medium_count": 2,
+      "low_count": 1,
+      "average_risk_score": 89.8,
+      "total_financial_loss": "\u20b966,016",
+      "total_fix_cost": "\u20b93.5L"
+    },
+    "created_at": "2026-06-11T10:48:03.425540"
+  },
+  {
+    "id": "184294c5-a0a2-451f-a282-a415d2f6301e",
+    "user_id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "url": "https://e2e-final-test.com",
+    "status": "completed",
+    "results": [
+      {
+        "type": "Authentication Weakness",
+        "severity": "Critical",
+        "description": "The login system at https://e2e-final-test.com/login lacks rate limiting, account lockout, and multi-factor authentication. Brute force attacks are feasible.",
+        "recommendation": "Implement rate limiting, account lockout after failed attempts, and multi-factor authentication. Use strong password policies.",
+        "risk_score": 100,
+        "breach_probability": "96%",
+        "financial_loss": "\u20b926.9L",
+        "fix_cost": "\u20b973,923"
+      },
+      {
+        "type": "Cross-Site Scripting (XSS)",
+        "severity": "High",
+        "description": "Reflected XSS vulnerability found in the search functionality at https://e2e-final-test.com/search. User input in the 'q' parameter is rendered without sanitization.",
+        "recommendation": "Implement output encoding using Content Security Policy (CSP). Sanitize all user inputs with libraries like DOMPurify.",
+        "risk_score": 100,
+        "breach_probability": "74%",
+        "financial_loss": "\u20b916.7L",
+        "fix_cost": "\u20b944,544"
+      },
+      {
+        "type": "Insecure Direct Object Reference (IDOR)",
+        "severity": "High",
+        "description": "IDOR vulnerability in API endpoint https://e2e-final-test.com/api/users. User IDs are sequential and accessible without proper authorization checks.",
+        "recommendation": "Implement proper access control checks. Use UUID-based identifiers and validate user ownership of resources.",
+        "risk_score": 100,
+        "breach_probability": "81%",
+        "financial_loss": "\u20b912.4L",
+        "fix_cost": "\u20b944,255"
+      },
+      {
+        "type": "Cross-Site Request Forgery (CSRF)",
+        "severity": "High",
+        "description": "Forms at https://e2e-final-test.com lack CSRF tokens. An attacker can craft malicious requests that execute authenticated actions without user consent.",
+        "recommendation": "Implement anti-CSRF tokens for all state-changing operations. Use SameSite cookie attribute and validate Origin headers.",
+        "risk_score": 100,
+        "breach_probability": "69%",
+        "financial_loss": "\u20b98.1L",
+        "fix_cost": "\u20b953,635"
+      },
+      {
+        "type": "Missing Security Headers",
+        "severity": "Medium",
+        "description": "The application at https://e2e-final-test.com is missing critical security headers: X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, and Content-Security-Policy.",
+        "recommendation": "Add security headers: Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, and Referrer-Policy.",
+        "risk_score": 100,
+        "breach_probability": "43%",
+        "financial_loss": "\u20b93.3L",
+        "fix_cost": "\u20b910,783"
+      },
+      {
+        "type": "Server Information Disclosure",
+        "severity": "Low",
+        "description": "Server version information is exposed in HTTP response headers at https://e2e-final-test.com. This aids attackers in targeting known vulnerabilities.",
+        "recommendation": "Disable server banner in response headers. Configure web server to hide version details.",
+        "risk_score": 18.8,
+        "breach_probability": "18%",
+        "financial_loss": "\u20b91.2L",
+        "fix_cost": "\u20b99,897"
+      }
+    ],
+    "stats": {
+      "total_vulnerabilities": 6,
+      "critical_count": 1,
+      "high_count": 3,
+      "medium_count": 1,
+      "low_count": 1,
+      "average_risk_score": 86.5,
+      "total_financial_loss": "\u20b90",
+      "total_fix_cost": "\u20b92.4L"
+    },
+    "created_at": "2026-06-11T10:52:44.435861"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "3b905b80-8651-4930-ad13-d2c020fa25be",
+    "user_id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "scan_id": "4d7fc651-c0fc-41cc-9eac-bcf86997088a",
+    "file_path": "C:\\Users\\User\\Documents\\Project-mini\\backend\\reports\\breachlens_report_4d7fc651_20260611_162241.pdf",
+    "summary": {
+      "total_vulnerabilities": 6,
+      "average_risk_score": 86.5,
+      "total_financial_loss": "\u20b90",
+      "total_fix_cost": "\u20b92.1L",
+      "critical_count": 1,
+      "high_count": 2,
+      "medium_count": 2,
+      "low_count": 1
+    },
+    "created_at": "2026-06-11T10:52:42.386899"
+  }
+]

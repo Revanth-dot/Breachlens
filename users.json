@@ -1,0 +1,23 @@
+[
+  {
+    "id": "35b33d56-4e18-4b01-b02b-1956e370d3f3",
+    "name": "Demo User",
+    "email": "demo@breachlens.com",
+    "hashed_password": "$2b$12$7nwefQwiEN5Qwc6RxDqhO.GwTBsvvU3.NoTsGRb.86Zep65D5InOu",
+    "created_at": "2026-06-11T10:48:02.683378"
+  },
+  {
+    "id": "e54f2aac-85ff-4378-8502-63ce00559833",
+    "name": "Admin User",
+    "email": "admin@breachlens.com",
+    "hashed_password": "$2b$12$7N6byYYZXcHq4dJQIocWoObA7YNHes5HTEEz4N8iKjmnu/8uxwuL2",
+    "created_at": "2026-06-11T10:48:03.312581"
+  },
+  {
+    "id": "2528734c-b8ff-4f98-bf18-276ba53b7a60",
+    "name": "E2E User",
+    "email": "e2e@test.com",
+    "hashed_password": "$2b$12$Dj7SxMqLMebnuMZzXrsdiO4I5vDlP2oAEU//R4SgMZ4gY6ZwQrsJG",
+    "created_at": "2026-06-11T10:52:53.685771"
+  }
+]
